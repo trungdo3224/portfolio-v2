@@ -9,9 +9,9 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 const Contact = () => {
   const refForm = useRef();
-  const publicKey = "lOBsgnsSWQsd4qpS7";
-  const templateId = "template_0w2yhgg";
-  const serviceId = "service_yzr00nn";
+  const publicKey = process.env.REACT_APP_EMAILJS_PK;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
   const sendEmail = (e) => {
     e.preventDefault();
